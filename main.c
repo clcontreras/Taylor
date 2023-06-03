@@ -14,5 +14,7 @@ int main() {
     TaylorThirdOrderSolution(x0,y0,h,n);
     printf("Modified Euler Solution:\n");
     modifiedEulerSolution(x0,y0,h,n);
+    printf("RK4 Solution:\n");
+    RK4Solution(x0,y0,h,n);
     return 0;
 }

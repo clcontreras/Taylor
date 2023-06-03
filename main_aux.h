@@ -36,5 +36,8 @@ void TaylorThirdOrderSolution(double x0, double y0, double h, unsigned int n);
 
 void modifiedEulerSolution(double x0, double y0, double h, unsigned int n);
 
+double RK4(double x0, double y0, double h);
+
+void RK4Solution(double x0, double y0, double h, unsigned int n);
 
 #endif //TAYLOR_MAIN_AUX_H
