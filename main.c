@@ -12,5 +12,7 @@ int main() {
     TaylorSecondOrderSolution(x0,y0,h,n);
     printf("Taylor Third Order Solution:\n");
     TaylorThirdOrderSolution(x0,y0,h,n);
+    printf("Modified Euler Solution:\n");
+    modifiedEulerSolution(x0,y0,h,n);
     return 0;
 }

@@ -114,3 +114,29 @@ void TaylorThirdOrderSolution(double x0, double y0, double h, unsigned int n){
     }
     fclose(fp);
 }
+
+double modifiedEuler(double x0, double y0, double h) {
+    double k1 = fxy(x0,y0);
+    double k2 = fxy(x0+h,y0+h*k1);
+    return y0+h/2*(k1+k2);
+}
+
+void modifiedEulerSolution(double x0, double y0, double h, unsigned int n){
+    FILE *fp;
+    fp = fopen("../ModifiedEulerSolution.dat", "w");
+    if (fp == NULL) {
+        printf("Error opening file!\n");
+        exit(1);
+    }
+    double x = x0;
+    double y = y0;
+    fprintf(fp, "%f %f\n", x, y);
+    printf("\t%f %f\n", x, y);
+    for (int i = 0; i < n; i++) {
+        y = modifiedEuler(x,y,h);
+        x += h;
+        fprintf(fp, "%f %f\n", x, y);
+        printf("\t%f %f\n", x, y);
+    }
+    fclose(fp);
+}

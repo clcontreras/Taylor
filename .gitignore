@@ -35,3 +35,7 @@
 /.idea/misc.xml
 /.idea/modules.xml
 /.idea/Taylor.iml
+/.idea/vcs.xml
+/TaylorSecondOrderSolution.dat
+/TaylorThirdOrderSolution.dat
+/ModifiedEulerSolution.dat

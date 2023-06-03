@@ -28,8 +28,13 @@ double Taylor_third_order(double x0, double y0, double h);
 
 void EulerSolution(double x0, double y0, double h, unsigned int n);
 
+double modifiedEuler(double x0, double y0, double h);
+
 void TaylorSecondOrderSolution(double x0, double y0, double h, unsigned int n);
 
 void TaylorThirdOrderSolution(double x0, double y0, double h, unsigned int n);
+
+void modifiedEulerSolution(double x0, double y0, double h, unsigned int n);
+
 
 #endif //TAYLOR_MAIN_AUX_H
