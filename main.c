@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "main_aux.h"
+#include "gsl_ode.h"
 
 int main() {
     unsigned int n = 5;
@@ -16,5 +17,7 @@ int main() {
     modifiedEulerSolution(x0,y0,h,n);
     printf("RK4 Solution:\n");
     RK4Solution(x0,y0,h,n);
+    printf("GSL Solution:\n");
+    gslSolution1d(x0,y0,h,n);
     return 0;
 }
